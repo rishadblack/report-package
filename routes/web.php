@@ -13,8 +13,8 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-
-Volt::route('test', 'test')->name('test');
-
+Route::get('report', App\Livewire\TestReportView::class)
+    ->middleware(['auth'])
+    ->name('report');
 
 require __DIR__.'/auth.php';
