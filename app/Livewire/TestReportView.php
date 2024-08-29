@@ -5,7 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 
-#[Layout('layouts.guest')]
+#[Layout('layouts.backend')]
 class TestReportView extends Component
 {
     public function render()

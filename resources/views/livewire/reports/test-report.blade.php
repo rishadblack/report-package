@@ -10,7 +10,7 @@
         @foreach ($datas as $data)
             <tr>
                 <td scope="row">{{ $data->id }}</td>
-                <td>{{ $data->name }}</td>
+                <td><strong>{{ $data->name }}</strong></td>
                 <td>{{ $data->email }}</td>
             </tr>
         @endforeach
