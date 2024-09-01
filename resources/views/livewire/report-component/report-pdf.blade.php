@@ -14,27 +14,23 @@
             src: url('{{ url('fonts/SolaimanLipi.ttf') }}') format('truetype');
         }
 
-        body {
+        /* body {
             font-family: 'SolaimanLipi', sans-serif;
             font-size: 12px;
-        }
+        } */
 
-        .bold {
+        /* .bold {
             font-weight: bold;
-        }
+        } */
 
-        table,
-        tr,
-        th,
-        td {
+        /* td {
             border: 1px solid black;
-        }
+        } */
     </style>
 </head>
 
 <body>
     <div>
-        <p><b>বাংলাদেশ এবং বিশ্বের সর্বশেষ খবর</b></p>
         @includeIf($view)
     </div>
 </body>

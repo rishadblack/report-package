@@ -28,21 +28,19 @@
             position: relative;
         }
 
-        body {
+        /* body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            /* Full viewport height */
+            height: 0vh;
             margin: 0;
             background-color: #f0f0f0;
-            /* Optional background color */
-        }
+        } */
     </style>
 </head>
 
 <body>
-    <div class="a4-page-view">
+    <div class="a4-page-views">
         {{ $slot }}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

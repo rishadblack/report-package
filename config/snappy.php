@@ -40,7 +40,7 @@ return [
         'timeout' => false,
         'options' => [
             'page-size' => 'A3',         // Set page size to A3
-            'orientation' => 'Landscape', // Set orientation to Landscape
+            'orientation' => 'Landscape', // Set orientation to Landscape / Portrait
         ],
         'env'     => [],
     ],

@@ -15,46 +15,27 @@ abstract class ReportComponent extends Component
 {
     use WithPagination;
 
-    public function baseBuilder():Builder
+    public $view;
+    public $pdf_view;
+    public $excel_view;
+    // public $pdf_export_by = 'mpdf'; // snappy or mpdf
+    public $pdf_export_by = 'snappy'; // snappy or mpdf
+    public $download_file_name = 'report';
+
+
+    public function baseBuilder(): Builder
     {
         return $this->builder();
     }
 
     public function exportPdf()
     {
-        $pdf = LaravelMpdf::loadView('livewire.report-component.report-pdf', $this->returnViewData(),[],[
-            'format' => 'A4-L',
-            'autoScriptToLang' => false,
-            'autoLangToFont' => false,
-            'autoVietnamese' => false,
-            'autoArabic' => false
-        ]);
-
-        return response()->streamDownload(function () use ($pdf) {
-            echo $pdf->stream('document.pdf');
-        }, 'document.pdf');
-
-        $pdf = SnappyPdf::loadView('livewire.report-component.report-pdf', $this->returnViewData());
-
-        return response()->streamDownload(function () use ($pdf) {
-            echo $pdf->output();
-        }, 'document.pdf');
-
         try {
-            // Render the Livewire component into HTML
-            $html = View::make('livewire.report-component.report-pdf', $this->returnViewData())->render();
-
-            // Ensure UTF-8 encoding
-            $html = mb_convert_encoding($html, 'UTF-8', 'auto');
-
-            // Generate PDF
-            $pdf = SnappyPdf::loadHTML($html);
-
-            // Stream the PDF
-            return response()->streamDownload(function () use ($pdf) {
-                echo $pdf->output();
-            }, 'test.pdf');
-
+            if ($this->pdf_export_by == 'mpdf') {
+                return $this->pdfExportByMpdf();
+            } else {
+                return $this->pdfExportBySnappy();
+            }
         } catch (\Exception $e) {
             // Handle error
             dd('PDF generation error: ' . $e->getMessage());
@@ -77,14 +58,48 @@ abstract class ReportComponent extends Component
     {
         if ($pagination) {
             $datas = $this->baseBuilder()->paginate(200);
-        }else{
+        } else {
             $datas = $this->baseBuilder()->get();
         }
 
         return ['datas' => $datas, 'view' => $this->view];
     }
 
+    public function pdfExportBySnappy()
+    {
+        $pdf = SnappyPdf::loadView('livewire.report-component.report-pdf', $this->returnViewData());
 
+        $pdf->setOption('page-size', 'A4'); // A3, A4, A5, Legal, Letter, Tabloid
+        $pdf->setOption('orientation', 'Portrait'); // Landscape or Portrait
+        // $pdf->setOption('margin-top', '10mm');
+        $pdf->setOption('header-center', '[page]/[toPage]'); //header-right='[page]/[toPage]'
+        $pdf->setOption('footer-center', '[page]/[toPage]'); //header-right='[page]/[toPage]'
+        $pdf->setOption('footer-left', 'Company Name'); //header-right='[page]/[toPage]'
+        $pdf->setOption('footer-right', now()->format('d-m-Y')); //header-right='[page]/[toPage]'
+
+
+
+
+        return response()->streamDownload(function () use ($pdf) {
+            echo $pdf->output();
+        }, 'document.pdf');
+    }
+
+    public function pdfExportByMpdf()
+    {
+
+        $pdf = LaravelMpdf::loadView('livewire.report-component.report-pdf', $this->returnViewData(), [], [
+            'format' => 'A4',
+            'autoScriptToLang' => false,
+            'autoLangToFont' => false,
+            'autoVietnamese' => false,
+            'autoArabic' => false
+        ]);
+
+        return response()->streamDownload(function () use ($pdf) {
+            echo $pdf->stream('document.pdf');
+        }, 'document.pdf');
+    }
 
     public function render()
     {

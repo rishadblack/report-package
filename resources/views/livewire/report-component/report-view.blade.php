@@ -1,5 +1,4 @@
 <div>
-    Report View Component
     @includeIf($view)
     {{ $datas->links() }}
     <button type="button" class="btn btn-success" wire:click="exportPdf">PDF</button>
