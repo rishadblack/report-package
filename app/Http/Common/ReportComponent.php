@@ -22,17 +22,17 @@ abstract class ReportComponent extends Component
 
     public function exportPdf()
     {
-        // $pdf = LaravelMpdf::loadView('livewire.report-component.report-pdf', $this->returnViewData(),[],[
-        //     'format' => 'A4-L',
-        //     'autoScriptToLang' => false,
-        //     'autoLangToFont' => false,
-        //     'autoVietnamese' => false,
-        //     'autoArabic' => false
-        // ]);
+        $pdf = LaravelMpdf::loadView('livewire.report-component.report-pdf', $this->returnViewData(),[],[
+            'format' => 'A4-L',
+            'autoScriptToLang' => false,
+            'autoLangToFont' => false,
+            'autoVietnamese' => false,
+            'autoArabic' => false
+        ]);
 
-        // return response()->streamDownload(function () use ($pdf) {
-        //     echo $pdf->stream('document.pdf');
-        // }, 'document.pdf');
+        return response()->streamDownload(function () use ($pdf) {
+            echo $pdf->stream('document.pdf');
+        }, 'document.pdf');
 
         $pdf = SnappyPdf::loadView('livewire.report-component.report-pdf', $this->returnViewData());
 
@@ -76,7 +76,7 @@ abstract class ReportComponent extends Component
     public function returnViewData($pagination = false)
     {
         if ($pagination) {
-            $datas = $this->baseBuilder()->paginate(10);
+            $datas = $this->baseBuilder()->paginate(200);
         }else{
             $datas = $this->baseBuilder()->get();
         }
