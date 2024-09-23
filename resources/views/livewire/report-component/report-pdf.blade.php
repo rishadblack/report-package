@@ -30,9 +30,7 @@
 </head>
 
 <body>
-    <div>
-        @includeIf($view)
-    </div>
+    @includeIf($view)
 </body>
 
 </html>

@@ -37,7 +37,7 @@ return [
         'enabled' => true,
         // 'binary'  => env('WKHTML_PDF_BINARY', base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64')),
         'binary' => '"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"',
-        'timeout' => false,
+        'timeout' => 180,
         'options' => [
             'page-size' => 'A3',         // Set page size to A3
             'orientation' => 'Landscape', // Set orientation to Landscape / Portrait
