@@ -1,4 +1,4 @@
-  <x-report.table>
+  <x-wire-reports::table>
       <x-slot:header>
           <tr>
               <td colspan="3" style="text-align: center; vertical-align: middle;">
@@ -12,7 +12,7 @@
           </tr>
           <tr>
               <td colspan="3" style="text-align: center;">
-                  <p><b>বাংলাদেশ এবং বিশ্বের সর্বশেষ খবর [page]</b></p>
+                  <p><b>বাংলাদেশ এবং বিশ্বের সর্বশেষ খবর</b></p>
               </td>
           </tr>
       </x-slot:header>
@@ -37,4 +37,4 @@
               </tr>
           @endforeach
       </x-slot:tbody>
-  </x-report.table>
+  </x-wire-reports::table>

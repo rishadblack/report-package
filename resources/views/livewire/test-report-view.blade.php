@@ -1,5 +1,6 @@
 <div>
     {{-- <livewire:reports.test-report /> --}}
+    <livewire:reports.salma.test />
     <h3>Name : {{ $received_name }}</h3>
     <h3>Message : {{ $received_message }}</h3>
     <input type="text" wire:model="message" />

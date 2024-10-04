@@ -8,13 +8,13 @@ use Rishadblack\WireReports\ReportComponent;
 
 class TestReport extends ReportComponent
 {
+    public function configure(): void
+    {
+        $this->setFileName('test-report');
+    }
+
     public function builder(): Builder
     {
         return User::query();
     }
-
-    // public function setReportView()
-    // {
-    //     return 'livewire/reports/test-report';
-    // }
 }

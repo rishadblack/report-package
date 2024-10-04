@@ -8,10 +8,25 @@ use App\Models\User;
 
 class Take extends ReportComponent
 {
-    public $view = 'livewire.reports.news.take';
+    public function configure(): void
+    {
+        $this->setFileName('test-report');
+        $this->setFileTitle('Take Report');
+
+    }
 
     public function builder(): Builder
     {
-        return User::query();
+        $user = User::query();
+
+        $user->when($this->getFilter('name'), function ($query, $value) {
+            $query->where('name', 'like', '%'.$value.'%');
+        });
+
+        $user->when($this->getFilter('email'), function ($query, $value) {
+            $query->where('email', 'like', '%'.$value.'%');
+        });
+
+        return $user;
     }
 }

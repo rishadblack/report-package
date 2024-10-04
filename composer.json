@@ -16,6 +16,7 @@
         "rishadblack/wire-reports": "^1.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.14",
         "fakerphp/faker": "^1.23",
         "jeroen-g/laravel-packager": "^2.10",
         "laravel/breeze": "^2.1",
