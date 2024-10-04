@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.4",
         "livewire/volt": "^1.0",
+        "rishadblack/larahelpers": "^1.0",
         "rishadblack/oracle-table-linker": "^1.0",
         "rishadblack/wire-reports": "^1.0"
     },
@@ -74,14 +75,21 @@
     "repositories": {
         "rishadblack/wire-reports": {
             "type": "path",
-            "url": "D:\\xampp\\htdocs\\report-package\\packages\\rishadblack\\wire-reports",
+            "url": "./packages/rishadblack/wire-reports",
             "options": {
                 "symlink": true
             }
         },
         "rishadblack/oracle-table-linker": {
             "type": "path",
-            "url": "D:\\xampp\\htdocs\\report-package\\packages\\rishadblack\\oracle-table-linker",
+            "url": "./packages/rishadblack/oracle-table-linker",
+            "options": {
+                "symlink": true
+            }
+        },
+        "rishadblack/larahelpers": {
+            "type": "path",
+            "url": "./packages/rishadblack/larahelpers",
             "options": {
                 "symlink": true
             }
