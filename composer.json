@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -14,7 +17,9 @@
         "livewire/volt": "^1.0",
         "rishadblack/larahelpers": "^1.0",
         "rishadblack/oracle-table-linker": "^1.0",
-        "rishadblack/wire-reports": "^1.0"
+        "rishadblack/wire-reports": "^1.0",
+        "rishadblack/wire-spreadsheet": "^0.0.1",
+        "rishadblack/wire-tomselect": "^0.0.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -73,6 +78,20 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": {
+        "rishadblack/wire-tomselect": {
+            "type": "path",
+            "url": "D:\\xampp\\htdocs\\report-package\\packages/rishadblack/wire-tomselect",
+            "options": {
+                "symlink": true
+            }
+        },
+        "rishadblack/wire-spreadsheet": {
+            "type": "path",
+            "url": "D:\\xampp\\htdocs\\report-package\\packages/rishadblack/wire-spreadsheet",
+            "options": {
+                "symlink": true
+            }
+        },
         "rishadblack/wire-reports": {
             "type": "path",
             "url": "./packages/rishadblack/wire-reports",

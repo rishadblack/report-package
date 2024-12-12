@@ -17,4 +17,9 @@ class TestReport extends ReportComponent
     {
         return User::query();
     }
+
+    public function columns(): array
+    {
+        return [];
+    }
 }

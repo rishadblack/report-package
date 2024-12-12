@@ -2,11 +2,11 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use Livewire\Attributes\On;
-use Livewire\Attributes\Layout;
 use Kreait\Firebase\Messaging\CloudMessage;
 use Kreait\Firebase\Messaging\Notification;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\On;
+use Livewire\Component;
 
 #[Layout('layouts.backend')]
 class TestReportView extends Component
@@ -14,13 +14,14 @@ class TestReportView extends Component
     public $message;
     public $received_name;
     public $received_message;
+    public $search;
 
     #[On('fcm-token')]
     public function receiveFcmToken($token)
     {
         // Get Firebase Messaging instance from the container
         $messaging = app('firebase.messaging');
-        $topic = 'test_topic_'.auth()->id();
+        $topic = 'test_topic_' . auth()->id();
 
         // Subscribe the token to the topic
         try {
@@ -38,13 +39,11 @@ class TestReportView extends Component
         $this->received_message = $payload['notification']['body'];
     }
 
-
-
     public function sendMessage()
     {
         $messaging = app('firebase.messaging');
 
-        $message = CloudMessage::withTarget('topic', 'test_topic_'.(auth()->id() == 1 ? 1002 : 1))
+        $message = CloudMessage::withTarget('topic', 'test_topic_' . (auth()->id() == 1 ? 1002 : 1))
             ->withNotification(Notification::create(auth()->user()->name, $this->message));
 
         // Send the message to the topic
