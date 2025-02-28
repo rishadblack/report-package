@@ -6,7 +6,6 @@
     {{-- <input type="text" wire:model="message" /> --}}
     {{-- <button type="button" wire:click="sendMessage">Send</button> --}}
     {{-- <livewire:test-table /> --}}
-    <livewire:search.test-search wire:model.change="search" name="search_user" />
     {{ $search }}
 </div>
 @script

@@ -1,5 +1,4 @@
 <?php
-
 namespace Database\Seeders;
 
 use App\Models\User;
@@ -21,5 +20,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         User::factory(1000)->create();
+
+        $this->call([
+            CountrySeeder::class,
+            DistrictSeeder::class,
+            DivisionSeeder::class,
+            UpazilaSeeder::class,
+        ]);
     }
 }

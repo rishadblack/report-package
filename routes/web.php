@@ -1,6 +1,5 @@
 <?php
 
-use Livewire\Volt\Volt;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
@@ -17,4 +16,8 @@ Route::get('report', App\Livewire\TestReportView::class)
     ->middleware(['auth'])
     ->name('report');
 
-require __DIR__.'/auth.php';
+Route::get('tomselect', App\Livewire\TomSelectCheck::class)
+    ->middleware(['auth'])
+    ->name('tomselect');
+
+require __DIR__ . '/auth.php';

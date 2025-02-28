@@ -70,7 +70,7 @@ import "./bootstrap";
 //     Livewire.dispatch("receivedMsg", { payload: payload });
 // });
 
-import "../../packages/rishadblack/wire-spreadsheet/resources/js/spreadsheet.js";
+// import "../../packages/rishadblack/wire-spreadsheet/resources/js/spreadsheet.js";
 
 import TomSelect from "tom-select";
 window.TomSelect = TomSelect;

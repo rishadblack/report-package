@@ -18,7 +18,6 @@
         "rishadblack/larahelpers": "^1.0",
         "rishadblack/oracle-table-linker": "^1.0",
         "rishadblack/wire-reports": "^1.0",
-        "rishadblack/wire-spreadsheet": "^0.0.1",
         "rishadblack/wire-tomselect": "^0.0.1"
     },
     "require-dev": {
@@ -80,14 +79,7 @@
     "repositories": {
         "rishadblack/wire-tomselect": {
             "type": "path",
-            "url": "D:\\xampp\\htdocs\\report-package\\packages/rishadblack/wire-tomselect",
-            "options": {
-                "symlink": true
-            }
-        },
-        "rishadblack/wire-spreadsheet": {
-            "type": "path",
-            "url": "D:\\xampp\\htdocs\\report-package\\packages/rishadblack/wire-spreadsheet",
+            "url": "./packages/rishadblack/wire-tomselect",
             "options": {
                 "symlink": true
             }
