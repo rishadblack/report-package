@@ -20,4 +20,12 @@ Route::get('tomselect', App\Livewire\TomSelectCheck::class)
     ->middleware(['auth'])
     ->name('tomselect');
 
+Route::get('laraform', App\Livewire\LaraformCheck::class)
+    ->middleware(['auth'])
+    ->name('laraform');
+
+Route::get('ireport', App\Livewire\IreportView::class)
+    ->middleware(['auth'])
+    ->name('ireport');
+
 require __DIR__ . '/auth.php';

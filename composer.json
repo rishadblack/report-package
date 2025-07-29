@@ -15,10 +15,12 @@
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.4",
         "livewire/volt": "^1.0",
+        "rishadblack/i-reports": "^1.0",
+        "rishadblack/laraform": "^0.0.1",
         "rishadblack/larahelpers": "^1.0",
         "rishadblack/oracle-table-linker": "^1.0",
         "rishadblack/wire-reports": "^1.0",
-        "rishadblack/wire-tomselect": "^0.0.1"
+        "rishadblack/wire-tomselect": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
@@ -77,6 +79,20 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": {
+        "rishadblack/i-reports": {
+            "type": "path",
+            "url": "D:\\xampp\\htdocs\\report-package\\packages/rishadblack/i-reports",
+            "options": {
+                "symlink": true
+            }
+        },
+        "rishadblack/ireport": {
+            "type": "path",
+            "url": "./packages/rishadblack/i-reports",
+            "options": {
+                "symlink": true
+            }
+        },
         "rishadblack/wire-tomselect": {
             "type": "path",
             "url": "./packages/rishadblack/wire-tomselect",
@@ -101,6 +117,13 @@
         "rishadblack/larahelpers": {
             "type": "path",
             "url": "./packages/rishadblack/larahelpers",
+            "options": {
+                "symlink": true
+            }
+        },
+        "rishadblack/laraform": {
+            "type": "path",
+            "url": "./packages/rishadblack/laraform",
             "options": {
                 "symlink": true
             }

@@ -1,4 +1,6 @@
 <div>
+    <h1>Wire Tom-Select</h1>
+
     <livewire:search.countries wire:model.change="country_id" name="country_id" label="Country" />
     <livewire:search.divisions wire:model.change="division_id" name="division_id" :$country_id label="Division" />
     <livewire:search.districts wire:model.change="district_id" name="district_id" :$division_id label="District"

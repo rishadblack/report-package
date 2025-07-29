@@ -74,3 +74,4 @@ import "./bootstrap";
 
 import TomSelect from "tom-select";
 window.TomSelect = TomSelect;
+import "../../packages/rishadblack/laraform/resources/js/laraform-all.js";
