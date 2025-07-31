@@ -81,13 +81,6 @@
     "repositories": {
         "rishadblack/i-reports": {
             "type": "path",
-            "url": "D:\\xampp\\htdocs\\report-package\\packages/rishadblack/i-reports",
-            "options": {
-                "symlink": true
-            }
-        },
-        "rishadblack/ireport": {
-            "type": "path",
             "url": "./packages/rishadblack/i-reports",
             "options": {
                 "symlink": true

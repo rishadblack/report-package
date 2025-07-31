@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb25a96a679b8d8ae37c48bde5acc70f",
+    "content-hash": "d59f93171d70609a5ba76a2754c4f676",
     "packages": [
         {
             "name": "barryvdh/laravel-snappy",
@@ -5866,8 +5866,8 @@
             "version": "1.0.3",
             "dist": {
                 "type": "path",
-                "url": "D:/xampp/htdocs/report-package/packages/rishadblack/i-reports",
-                "reference": "7a4168039393ff8e3be591db0cc9ddb8ea1d106e"
+                "url": "./packages/rishadblack/i-reports",
+                "reference": "141100eb4469eb67cf6fe1124b78d88b263acb4b"
             },
             "require": {
                 "barryvdh/laravel-snappy": "^1.0",
@@ -5903,7 +5903,7 @@
                 }
             },
             "license": [
-                "AGPL-3.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -5912,7 +5912,7 @@
                     "homepage": "https://smrishad.com"
                 }
             ],
-            "description": ":package_description",
+            "description": ":Reusable and extensible Laravel reporting package featuring dynamic report loading, Livewire-driven filters, export to PDF and Excel using blade views, and support for modular applications.",
             "homepage": "https://github.com/rishadblack/i-reports",
             "keywords": [
                 "IReports",
@@ -5920,7 +5920,7 @@
             ],
             "transport-options": {
                 "symlink": true,
-                "relative": false
+                "relative": true
             }
         },
         {
@@ -5987,7 +5987,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/rishadblack/larahelpers",
-                "reference": "eb7d97cfbe4b38827f83879939e1648e561350ed"
+                "reference": "9ecb34d8492ba1907f4d0ccc11bc9dc832015ff2"
             },
             "require": {
                 "illuminate/support": "~5.8.0|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
@@ -6031,11 +6031,11 @@
         },
         {
             "name": "rishadblack/oracle-table-linker",
-            "version": "1.1.7",
+            "version": "1.1.5",
             "dist": {
                 "type": "path",
                 "url": "./packages/rishadblack/oracle-table-linker",
-                "reference": "a7498505f559bbb85b89c910895f42de631c29f0"
+                "reference": "3e6c42f67ca73ee0fe7fbb8cb5636d91d21e49cf"
             },
             "require": {
                 "illuminate/support": "^9.0|^10.0|^11.0",
@@ -6067,7 +6067,7 @@
                 }
             },
             "license": [
-                "AGPL-3.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -6093,7 +6093,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/rishadblack/wire-reports",
-                "reference": "f0292674cadb07090fda864618df9fbdf6b1558d"
+                "reference": "58cded1a38b0566a2be2fc6f1dc57d367452aead"
             },
             "require": {
                 "barryvdh/laravel-snappy": "^1.0",
@@ -6155,7 +6155,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/rishadblack/wire-tomselect",
-                "reference": "4726e45540b3c8d5f5a05c712c6a8021fba21d69"
+                "reference": "3a33b2399bd63e0f673d544453eddf01fa84284e"
             },
             "require": {
                 "illuminate/support": "^9.0|^10.0|^11.0",
@@ -11519,12 +11519,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
