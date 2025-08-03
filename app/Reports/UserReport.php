@@ -16,8 +16,8 @@ class UserReport extends BaseReportController
     {
         // For example, to override filename prefix (optional)
         // $this->setFileName('custom_users_report');
-        $this->setPaginationList([10, 25, 50]);
-        // $this->setOrientation('landscape');
+        // $this->setPaginationList([10, 25, 50]);
+        $this->setOrientation('landscape');
 
     }
 
